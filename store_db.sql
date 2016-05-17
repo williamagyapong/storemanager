@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 16, 2016 at 12:27 PM
+-- Generation Time: May 17, 2016 at 05:09 AM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 5.6.15
 
@@ -46,7 +46,7 @@ CREATE TABLE `personnels` (
   `lname` varchar(32) NOT NULL,
   `username` varchar(64) NOT NULL,
   `password` varchar(100) NOT NULL,
-  `date_reg` datetime NOT NULL,
+  `date_reg` date NOT NULL,
   `role` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -117,7 +117,7 @@ ALTER TABLE `sales`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `personnels`
 --
