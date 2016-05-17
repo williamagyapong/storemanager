@@ -6,6 +6,7 @@ function print_array($array)
 	 print_r($array);
 	echo "</pre>";
 }
+
   function insert($table, array $data)
  {
  	  // builds  query statement
@@ -43,11 +44,11 @@ function print_array($array)
  } //end of insert function
 
 #use case
- insert('users',[
+ /*insert('users',[
  	   'fname'=>'william',
  	   'lname'=>'agyapong',
  	   'username'=>'willisco'
- 	]);
+ 	]);*/
 
  function select($sql)
  {
