@@ -1,10 +1,10 @@
 <?php
    session_start();//start session to be able to use session variables
    require_once'../../core/config.php';
-   authenticate("sales-person");//prevents unautorized visitors
+   authenticate("sales-person");//prevents unauthorized visitors
    
-     $sales = getTotalSales();
-     $total = 0;
+     $sales = getTotalSales();//from(core/functions/products.php)
+     $total = 0;//initialize total sales to zero
 
    
 ?>
@@ -36,7 +36,7 @@
                  Overall Sales Report</h2>
               
               <table border="1" cellspacing="0" cellpadding="5" class="table">
-              <!-- the same if statement with : used in place of {}. Observe the structure carefully-->
+              <!-- the same if statement with ":" used in place of {}. Observe the structure carefully-->
               <?php if(empty($sales)):?>
                 <h2 style="color:#ccc;text-align:center;">No sales available</h2>
               <?php else:?>

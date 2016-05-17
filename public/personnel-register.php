@@ -68,11 +68,11 @@
  	<fieldset>
  		<legend>Registration Form</legend>
 
- 		<input type="text" name="fname" placeholder="first name" required class="text_input"><br><br>
+ 		<input type="text" name="fname" placeholder="first name" required class="text_input" autocomplete="off"><br><br>
 
- 		<input type="text" name="lname" placeholder="last name" required class="text_input"><br><br>
+ 		<input type="text" name="lname" placeholder="last name" required class="text_input" autocomplete="off"><br><br>
 
- 		<input type="text" name="username" placeholder="username" required class="text_input"><br><br>
+ 		<input type="text" name="username" placeholder="username" required class="text_input" autocomplete="off"><br><br>
 
  		<input type="password" name="password" placeholder="password" required class="text_input"><br><br>
 

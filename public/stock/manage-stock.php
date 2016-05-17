@@ -5,7 +5,7 @@
    authenticate("stock-manager");//prevents unautorized visitors
    if(isset($_POST['add-stock']))
    {
-   	  //make a call to addProduct function(functions/product.php)
+   	//Use addProduct function(core/functions/product.php)
       addproduct();
    }
    
@@ -26,11 +26,11 @@
    	   	   	<fieldset>
    	   	   		<legend>Add Stock</legend>
 
-   	   	   		<input type="text" name="name" required class="text_input" placeholder="Stock name"><br><br>
+   	   	   		<input type="text" name="name" required class="text_input" placeholder="Stock name" autocomplete="off"><br><br>
 
-   	   	   		<input type="text" name="price" required class="text_input" placeholder="Price"><br><br>
+   	   	   		<input type="text" name="price" required class="text_input" placeholder="Price" autocomplete="off"><br><br>
 
-   	   	   		<input type="text" name="quantity" required class="text_input" placeholder="Quantity"><br><br>
+   	   	   		<input type="text" name="quantity" required class="text_input" placeholder="Quantity" autocomplete="off"><br><br>
 
    	   	   		<input type="date" name="expiry-date" required class="text_input" placeholder="Expiry date" onfocus="myAlert()" onblur="myHide()"><br>
                      <span id="alert" style="color:red"></span>

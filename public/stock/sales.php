@@ -1,24 +1,32 @@
 <?php
+/**
+*This page dynamically switches between four interfaces{search 
+*form(default), search results, sales form & sales report} 
+*based on either of four main actions activated by the user.
+*
+*Take time to understand the logic
+*/
 session_start();
 require'../includes/header.php';
 require_once'../../core/config.php';
 
-authenticate("sales-person");//prevents unautorized visitors
+authenticate("sales-person");//prevents unauthorized visitors
 
  $showSearchForm = TRUE;
  $makeSale = FALSE;//use to control the make sales form
  $showReport= FALSE;//use to control the sales report table
 if(isset($_POST['search']))
 {
-	if(!empty(searchProd($_POST['name'])))
-	{
-  		  $products = searchProd($_POST['name']);
-    		$showSearchResult=TRUE;//use to control the product result table
-        $showSearchForm =FALSE;
-  	}
-  	else{
-  		echo "<h2 class='h2'>Product is not available</h2>";
-  	}
+     //searchProd(core/functions/products.php)
+  	if(!empty(searchProd($_POST['name'])))
+  	{
+    		  $products = searchProd($_POST['name']);
+      		$showSearchResult=TRUE;//use to control the product result table
+          $showSearchForm =FALSE;
+    	}
+    	else{
+    		echo "<h2 class='h2'>Product is not available</h2>";
+    	}
 }
 elseif(isset($_POST['initiate-sale']))
 {
@@ -44,7 +52,7 @@ elseif(isset($_POST['accept-sale']))
         unset($_SESSION['qty-sold']);
   	 }else{
             $makeSale =TRUE;
-          
+            //sales is rejected if the quantity bought exceeds what is available or the payment made is less than the cost of the item or both in which case the makeSales() function returns an empty array
             echo "<h2 style='color:red;' class='h2'>Sales rejected!!</h2>";
        }
 	

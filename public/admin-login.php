@@ -40,7 +40,7 @@ session_start();//start session to be able to use the session variable
  	<fieldset>
  		<legend>Admin Login</legend>
           <br><br>
- 		<input type="text" name="username" placeholder="username" class="text_input" required><br><br>
+ 		<input type="text" name="username" placeholder="username" class="text_input" required autocomplete="off"><br><br>
 
  		<input type="password" name="password" placeholder="password" class="text_input" required><br><br>
 

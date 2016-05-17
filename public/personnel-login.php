@@ -40,11 +40,11 @@ session_start();//start session to be able to use the session variable
   <fieldset>
     <legend>Personnel Login</legend>
           <br><br>
-    <input type="text" name="username" placeholder="username" class="text_input" required><br><br>
+    <input type="text" name="username" placeholder="username" class="text_input" required autocomplete="off"><br><br>
 
     <input type="password" name="password" placeholder="password" class="text_input" required><br><br>
 
-    <input type="text" name="role" placeholder="assigned role" class="text_input" required><br><br>
+    <input type="text" name="role" placeholder="assigned role" class="text_input" required autocomplete="off"><br><br>
 
     <input type="submit" name="login" value="Login" class="text_input">
 
