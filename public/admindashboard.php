@@ -1,6 +1,8 @@
 <?php
  session_start();//start session to be able to use session variables
-
+ require_once '../core/config.php';
+ $id = $_SESSION['ADMINID'];
+ $admin = select("SELECT * FROM `admin` WHERE `id`='$id'")[0];
 ?>
 
 <!DOCTYPE html>
@@ -28,35 +30,9 @@
 		padding-top: 20%;
 		background: white;
     }
-    .side-menu{
- 	width: 25%;
- 	min-height: 400px;
- 	background: #ccc;
-
- 	position: relative;
- 	left: 50%;
- 	margin-left: -12.5%;
- 	border: 1px solid grey;
- 	border-radius: 10px;
- 	display: none;
- }
- #show{
- 	font-size: 22px;
- 	font-weight: bold;
- 	width: 100%;
-  cursor: pointer;
-
-
- }
- .button{
- 	width: 70%;
- 	border-radius: 6px;
- 	font-weight: bold;
- 	font-size: 22px;
- 	padding-left: 10%;
- 	cursor: pointer;
-
- }
+  span{
+    color: red;
+  }
   </style>
 </head>
 <body>
@@ -78,10 +54,13 @@
        
         <button class="button"><a href="admin-login.php">Login</a></button>
        <?php endif;?><!-- end of the if statement -->
-   </div>
-    
-       
-    </div>
+    </div> 
+  </div>
+  <div class="logged">
+      <h2>
+         <span>Logged in as:</span> <?php echo $admin['username']; ?>
+      </h2>
+  </div>
 
     <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" >

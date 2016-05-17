@@ -11,7 +11,7 @@ function login($type)
 		echo "<h2>All fields are required</h2>";
 	}
 	else{
-		//has the password
+		//hash the password
 		$password = md5($password);
 		//select existing credentials
 		if($type=='admin')//handle adminstrator login
@@ -61,7 +61,7 @@ function login($type)
 			}
 		}
 		
-		//print_array($prevData);die();
+
 		
 	}
 }
@@ -80,7 +80,7 @@ function authenticate($type)
 	}
 	elseif($type=="sales-person")
 	{
-       if(!isset($_SESSION['sales-person'])||!isset($_SESSION['ADMINID'])){
+       if(!isset($_SESSION['sales-person'])){
 
        	  header("Location:$url2");
        }
@@ -88,7 +88,7 @@ function authenticate($type)
 	}
 	elseif($type=="stock-manager")
 	{
-       if(!isset($_SESSION['stock-manager'])||!isset($_SESSION['ADMINID'])){
+       if(!isset($_SESSION['stock-manager'])){
 
        	  header("Location:$url2");
        }

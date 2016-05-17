@@ -19,7 +19,7 @@
    $total = 0;
 
    $seller = getSeller($_SESSION['sales-person'])[0];
-   $name   = $seller['fname']." ".$seller['lname'];
+   $name   = ucfirst($seller['fname'])." ".ucfirst($seller['lname']);//ucfirst() makes the first letter capital if it is small
    
    
    

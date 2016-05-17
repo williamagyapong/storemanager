@@ -43,6 +43,41 @@ legend{
 
 }
 
+  .side-menu{
+ 	width: 25%;
+ 	min-height: 400px;
+ 	background: #ccc;
+
+ 	position: relative;
+ 	left: 50%;
+ 	margin-left: -12.5%;
+ 	border: 1px solid grey;
+ 	border-radius: 10px;
+ 	display: none;
+ }
+ #show{
+ 	font-size: 22px;
+ 	font-weight: bold;
+ 	width: 100%;
+  cursor: pointer;
+
+
+ }
+ .button{
+ 	width: 70%;
+ 	border-radius: 6px;
+ 	font-weight: bold;
+ 	font-size: 22px;
+ 	padding-left: 10%;
+ 	cursor: pointer;
+
+ }
+ .logged{
+ 	margin-right: 20px;
+ 	text-align: right;
+ 	color: black;
+ }
+
 
 .text_input{
 	min-height: 40px;
